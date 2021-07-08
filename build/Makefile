@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named twist_service
+
+# Build rule for target.
+twist_service: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 twist_service
+.PHONY : twist_service
+
+# fast build rule for target.
+twist_service/fast:
+	$(MAKE) -f pose_project/CMakeFiles/twist_service.dir/build.make pose_project/CMakeFiles/twist_service.dir/build
+.PHONY : twist_service/fast
+
+#=============================================================================
 # Target rules for targets named pose_subscriber
 
 # Build rule for target.
@@ -592,6 +605,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... twist_service"
 	@echo "... pose_subscriber"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_eus"

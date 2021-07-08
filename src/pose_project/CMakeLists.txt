@@ -117,6 +117,9 @@ target_link_libraries(pose_publisher ${catkin_LIBRARIES})
 add_executable(pose_subscriber src/pose_subscriber.cpp)
 target_link_libraries(pose_subscriber ${catkin_LIBRARIES}) 
 
+add_executable(twist_service src/twist_service.cpp)
+target_link_libraries(twist_service ${catkin_LIBRARIES}) 
+
 ###########
 ## Build ##
 ###########

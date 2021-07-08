@@ -3,10 +3,30 @@
 #include "geometry_msgs/PoseStamped.h"
 #include "geometry_msgs/Twist.h"
 
+// TODO: Setup Time Calculation
+
 geometry_msgs::Twist twist;
+geometry_msgs::PoseStamped previousPose;
 
 void twistConverter (const geometry_msgs::PoseStamped::ConstPtr&msg) {
-	ROS_INFO("Coordinate: [x: %.2f] [y: %.2f] [z: %.2f]", msg->pose.position.x, msg->pose.position.y, msg->pose.position.z);
+    twist.linear.x = (previousPose.pose.orientation.x - msg->pose.position.x)/();
+    twist.linear.y = msg->pose.position.y;
+    twist.linear.z = msg->pose.position.z;
+
+    twist.angular.x = msg->pose.orientation.x;
+    twist.angular.y = msg->pose.orientation.y;
+    twist.angular.z = msg->pose.orientation.z;
+
+    previousPose.pose.position.x = msg->pose.position.x;
+    previousPose.pose.position.y = msg->pose.position.y;
+    previousPose.pose.position.z = msg->pose.position.z;
+
+    previousPose.pose.orientation.x = msg->pose.orientation.x;
+    previousPose.pose.orientation.y = msg->pose.orientation.y;
+    previousPose.pose.orientation.z = msg->pose.orientation.z;
+
+    previousPose.header.time.sec = msg->header.time.sec; 
+    previousPose.header.time.nsec = msg->header.time.nsec; 
 }
 
 int main (int argc, char** argv) {
@@ -15,8 +35,24 @@ int main (int argc, char** argv) {
 
 	ros::NodeHandle n;
 	ros::Subscriber posesub = n.subscribe("posetopic", 1000, twistConverter);
-	ros::Publisher posepub = n.advertise<geometry_msgs::PoseStamped>("posetopic", 1000);
-	ros::Rate loop_rate(10);
+	ros::Publisher twistpub = n.advertise<geometry_msgs::Twist>("twisttopic", 200);
+	ros::Rate loop_rate(5);
 
-	return 1;
+    twist.linear.x = 0;
+    twist.linear.y = 0;
+    twist.linear.z = 0;
+
+    twist.angular.x = 0;
+    twist.angular.y = 0;
+    twist.angular.z = 0;
+
+    while (ros::ok()) {
+	    twistpub.publish(twist);
+
+	    ros::spinOnce();
+	    loop_rate.sleep();
+    }
+
+
+	return 0;
 }

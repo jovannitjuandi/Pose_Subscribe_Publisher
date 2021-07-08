@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+pose_project/CMakeFiles/twist_service.dir/rule:
+	cd /home/mtrn4230/lab04/Pose_Subscribe_Publisher/build && $(MAKE) -f CMakeFiles/Makefile2 pose_project/CMakeFiles/twist_service.dir/rule
+.PHONY : pose_project/CMakeFiles/twist_service.dir/rule
+
+# Convenience name for target.
+twist_service: pose_project/CMakeFiles/twist_service.dir/rule
+
+.PHONY : twist_service
+
+# fast build rule for target.
+twist_service/fast:
+	cd /home/mtrn4230/lab04/Pose_Subscribe_Publisher/build && $(MAKE) -f pose_project/CMakeFiles/twist_service.dir/build.make pose_project/CMakeFiles/twist_service.dir/build
+.PHONY : twist_service/fast
+
+# Convenience name for target.
 pose_project/CMakeFiles/pose_subscriber.dir/rule:
 	cd /home/mtrn4230/lab04/Pose_Subscribe_Publisher/build && $(MAKE) -f CMakeFiles/Makefile2 pose_project/CMakeFiles/pose_subscriber.dir/rule
 .PHONY : pose_project/CMakeFiles/pose_subscriber.dir/rule
@@ -551,6 +566,33 @@ src/pose_subscriber.cpp.s:
 	cd /home/mtrn4230/lab04/Pose_Subscribe_Publisher/build && $(MAKE) -f pose_project/CMakeFiles/pose_subscriber.dir/build.make pose_project/CMakeFiles/pose_subscriber.dir/src/pose_subscriber.cpp.s
 .PHONY : src/pose_subscriber.cpp.s
 
+src/twist_service.o: src/twist_service.cpp.o
+
+.PHONY : src/twist_service.o
+
+# target to build an object file
+src/twist_service.cpp.o:
+	cd /home/mtrn4230/lab04/Pose_Subscribe_Publisher/build && $(MAKE) -f pose_project/CMakeFiles/twist_service.dir/build.make pose_project/CMakeFiles/twist_service.dir/src/twist_service.cpp.o
+.PHONY : src/twist_service.cpp.o
+
+src/twist_service.i: src/twist_service.cpp.i
+
+.PHONY : src/twist_service.i
+
+# target to preprocess a source file
+src/twist_service.cpp.i:
+	cd /home/mtrn4230/lab04/Pose_Subscribe_Publisher/build && $(MAKE) -f pose_project/CMakeFiles/twist_service.dir/build.make pose_project/CMakeFiles/twist_service.dir/src/twist_service.cpp.i
+.PHONY : src/twist_service.cpp.i
+
+src/twist_service.s: src/twist_service.cpp.s
+
+.PHONY : src/twist_service.s
+
+# target to generate assembly for a file
+src/twist_service.cpp.s:
+	cd /home/mtrn4230/lab04/Pose_Subscribe_Publisher/build && $(MAKE) -f pose_project/CMakeFiles/twist_service.dir/build.make pose_project/CMakeFiles/twist_service.dir/src/twist_service.cpp.s
+.PHONY : src/twist_service.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -560,6 +602,7 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... rebuild_cache"
+	@echo "... twist_service"
 	@echo "... pose_subscriber"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... install"
@@ -592,6 +635,9 @@ help:
 	@echo "... src/pose_subscriber.o"
 	@echo "... src/pose_subscriber.i"
 	@echo "... src/pose_subscriber.s"
+	@echo "... src/twist_service.o"
+	@echo "... src/twist_service.i"
+	@echo "... src/twist_service.s"
 .PHONY : help
 
 

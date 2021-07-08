@@ -3,7 +3,7 @@
 #include "geometry_msgs/PoseStamped.h"
 
 void poseCallback (const geometry_msgs::PoseStamped::ConstPtr&msg) {
-	ROS_INFO("Coordinate: [x: %.2f] [y: %.2f] [z: %.2f]", msg->pose.position.x, msg->pose.position.y, msg->pose.position.z);
+	ROS_INFO("COORDINATE: [x: %.2f] [y: %.2f] [z: %.2f]", msg->pose.position.x, msg->pose.position.y, msg->pose.position.z);
 }
 
 int main (int argc, char** argv) {

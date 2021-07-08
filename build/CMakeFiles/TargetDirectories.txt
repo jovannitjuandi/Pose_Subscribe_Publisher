@@ -38,6 +38,7 @@
 /home/mtrn4230/lab04/Pose_Subscribe_Publisher/build/pose_project/CMakeFiles/install/strip.dir
 /home/mtrn4230/lab04/Pose_Subscribe_Publisher/build/pose_project/CMakeFiles/install/local.dir
 /home/mtrn4230/lab04/Pose_Subscribe_Publisher/build/pose_project/CMakeFiles/rebuild_cache.dir
+/home/mtrn4230/lab04/Pose_Subscribe_Publisher/build/pose_project/CMakeFiles/twist_service.dir
 /home/mtrn4230/lab04/Pose_Subscribe_Publisher/build/pose_project/CMakeFiles/pose_subscriber.dir
 /home/mtrn4230/lab04/Pose_Subscribe_Publisher/build/pose_project/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
 /home/mtrn4230/lab04/Pose_Subscribe_Publisher/build/pose_project/CMakeFiles/install.dir

@@ -408,12 +408,14 @@ clean: gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
 # Directory level rules for directory pose_project
 
 # Convenience name for "all" pass in the directory.
+pose_project/all: pose_project/CMakeFiles/twist_service.dir/all
 pose_project/all: pose_project/CMakeFiles/pose_subscriber.dir/all
 pose_project/all: pose_project/CMakeFiles/pose_publisher.dir/all
 
 .PHONY : pose_project/all
 
 # Convenience name for "clean" pass in the directory.
+pose_project/clean: pose_project/CMakeFiles/twist_service.dir/clean
 pose_project/clean: pose_project/CMakeFiles/pose_subscriber.dir/clean
 pose_project/clean: pose_project/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 pose_project/clean: pose_project/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
@@ -443,6 +445,43 @@ pose_project/clean: pose_project/CMakeFiles/roscpp_generate_messages_py.dir/clea
 pose_project/preinstall:
 
 .PHONY : pose_project/preinstall
+
+#=============================================================================
+# Target rules for target pose_project/CMakeFiles/twist_service.dir
+
+# All Build rule for target.
+pose_project/CMakeFiles/twist_service.dir/all:
+	$(MAKE) -f pose_project/CMakeFiles/twist_service.dir/build.make pose_project/CMakeFiles/twist_service.dir/depend
+	$(MAKE) -f pose_project/CMakeFiles/twist_service.dir/build.make pose_project/CMakeFiles/twist_service.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mtrn4230/lab04/Pose_Subscribe_Publisher/build/CMakeFiles --progress-num=16,17 "Built target twist_service"
+.PHONY : pose_project/CMakeFiles/twist_service.dir/all
+
+# Include target in all.
+all: pose_project/CMakeFiles/twist_service.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+pose_project/CMakeFiles/twist_service.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mtrn4230/lab04/Pose_Subscribe_Publisher/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 pose_project/CMakeFiles/twist_service.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mtrn4230/lab04/Pose_Subscribe_Publisher/build/CMakeFiles 0
+.PHONY : pose_project/CMakeFiles/twist_service.dir/rule
+
+# Convenience name for target.
+twist_service: pose_project/CMakeFiles/twist_service.dir/rule
+
+.PHONY : twist_service
+
+# clean rule for target.
+pose_project/CMakeFiles/twist_service.dir/clean:
+	$(MAKE) -f pose_project/CMakeFiles/twist_service.dir/build.make pose_project/CMakeFiles/twist_service.dir/clean
+.PHONY : pose_project/CMakeFiles/twist_service.dir/clean
+
+# clean rule for target.
+clean: pose_project/CMakeFiles/twist_service.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target pose_project/CMakeFiles/pose_subscriber.dir
