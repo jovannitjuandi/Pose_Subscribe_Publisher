@@ -1,0 +1,4 @@
+<launch>
+	<node name="pose_publisher" pkg="pose_project" type="pose_publisher" output="screen"/>
+	<node name="pose_subscriber" pkg="pose_project" type="pose_subscriber" output="screen"/>
+</launch>
