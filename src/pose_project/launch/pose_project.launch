@@ -1,4 +1,4 @@
 <launch>
-	<node name="pose_publisher" pkg="pose_project" type="pose_publisher" output="screen" launch-prefix="xterm -e gdb"/>
-	<node name="pose_subscriber" pkg="pose_project" type="pose_subscriber" output="screen" launch-prefix="xterm -e gdb"/>
+	<node name="pose_publisher" pkg="pose_project" type="pose_publisher" output="screen" launch-prefix="valgrind"/>
+	<node name="pose_subscriber" pkg="pose_project" type="pose_subscriber" output="screen" launch-prefix="valgrind"/>
 </launch>
