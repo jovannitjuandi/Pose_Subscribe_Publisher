@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/mtrn4230/lab04/Pose_Subscribe_Publisher/devel -DCMAKE_INSTALL_PREFIX=/home/mtrn4230/lab04/Pose_Subscribe_Publisher/install -G Unix Makefiles
